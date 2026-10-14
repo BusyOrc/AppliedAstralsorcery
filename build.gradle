@@ -98,8 +98,10 @@ configurations {
 }
 
 dependencies {
-    compileOnly "hellfirepvp.astralsorcery:AstralSorcery:${astral_sorcery_version}"
-    localRuntime "hellfirepvp.astralsorcery:AstralSorcery:${astral_sorcery_version}"
+    // Astral Sorcery and ObserverLib are taken from the local jars in ../files, since the
+    // HellFirePvP maven is not available here.
+    compileOnly files('../files/AstralSorcery-2.0.2.39.jar')
+    localRuntime files('../files/AstralSorcery-2.0.2.39.jar')
 
     compileOnly "org.appliedenergistics:appliedenergistics2:${ae2_version}"
     localRuntime "org.appliedenergistics:appliedenergistics2:${ae2_version}"
@@ -107,8 +109,8 @@ dependencies {
     compileOnly "org.appliedenergistics:guideme:21.1.1"
     localRuntime "org.appliedenergistics:guideme:21.1.1"
 
-    compileOnly "hellfirepvp.observerlib:ObserverLib:${observerlib_version}"
-    localRuntime "hellfirepvp.observerlib:ObserverLib:${observerlib_version}"
+    compileOnly files('../files/observerlib-1.10.3.jar')
+    localRuntime files('../files/observerlib-1.10.3.jar')
     compileOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}"
     localRuntime "top.theillusivec4.curios:curios-neoforge:${curios_version}"
 
